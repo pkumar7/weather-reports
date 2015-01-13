@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <h1>Temperature Report For Each Day</h1>
+    {% for x, y in min_max_temp_of_day.items %}
+    DATE - {{ x }} 
+    <br><br> [Min Temp]: {% for k, v in y.min_temp.items %}  {{ k }} - {{ v }} ; {% endfor %}
+    <br><br> [Max Temp]: {% for k, v in y.max_temp.items %}  {{ k }} - {{ v }} ; {% endfor %}
+    <br><br>
+    {% endfor %}
+    
+    <h1> Temperature In Increasing Order </h1>
+    {% for temp, date in temp_in_increasing_order %}
+      {{ temp }} - {{ date }}
+      <br><br>
+    {%  endfor %}
+  </body>
+</html>
